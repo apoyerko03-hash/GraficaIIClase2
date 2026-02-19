@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { EditorFiltroComponent } from '@angular/router';
+import { EditorFiltroComponent } from './editor-filtro/editor-filtro';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [EditorFiltroComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
-  protected readonly title = signal('GraficaClase2');
-}
+export class App {}

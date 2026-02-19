@@ -13,7 +13,8 @@ blur = signal(0);   //pixeles
 filtroScss = computed(()=>{
   return `brightness(${this.brillo()}%) contrast(${this.contraste()}%) blur(${this.blur()}px)`;
 })
-actualizar = (prop: string, evento: Event){
+
+actualizar  (prop: string, evento: Event){
 const valor = (evento.target as HTMLInputElement).value; //recicir una propiedad y un evento
 if (prop == 'brillo') this.brillo.set(+valor);
 if (prop == 'contraste') this.contraste.set(+valor);
