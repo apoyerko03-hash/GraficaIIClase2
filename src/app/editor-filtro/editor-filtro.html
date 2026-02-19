@@ -1,6 +1,6 @@
 <div class="card-grafica">
     <div class="canvas-preview">
-        <img [style.filter]="filtroScss()"src="https://picsum.photos/id/10/600/400" alt="pana miguel">
+        <img [style.filter]="filtroScss()"src="https://picsum.photos/id/200/600/400" alt="pana miguel">
         <div class="controles">
                 <label>Brillo:{{brillo()}}</label>
                 <input type="range" min="0" max="200" (input)="actualizar('brillo',$event)">
@@ -8,6 +8,7 @@
                 <input type="range" min="0" max="200" (input)="actualizar('contraste',$event)">
                 <label>Pixel:{{blur()}}</label>
                 <input type="range" min="0" max="200" (input)="actualizar('blur',$event)">
+                <button (click)="cambiarRetro()">{{retro() ? 'Desactivar' : 'Activar'}} Cambiar a Retro</button>
         </div>
     </div>
 </div>
